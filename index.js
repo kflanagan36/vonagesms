@@ -13,17 +13,6 @@ const eventUrl = process.env.EVENT_URL
 
 app.use(bodyParser.json())
 
-app.get('/webhooks/answer', (request, response) => {
-
-  const ncco = [{
-    action: 'talk',
-    text: 'Hi, please send a message to receive a response'
-  }]
-  
-  console.log('/webhooks/answer')
-  response.json(ncco)
-})
-
 app.post('/webhooks/sms', (request, response) => {
   
   console.log(request.body)
